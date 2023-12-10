@@ -1,6 +1,6 @@
 # server.props.js
 
-Serialize / Deserialize minecraft server.properties without losing comments in files.
+Serialize / Deserialize minecraft server.properties **without losing comments in files**.
 My standard is no test no bug 😊. Everything is fine.
 
 ## Serialize
