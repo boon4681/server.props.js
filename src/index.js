@@ -24,6 +24,8 @@ const serialize = (input, options) => {
         let trimmed = line.slice(0, eq).trim();
         if (/\s/.test(trimmed)) {
             if (options.throw) throw new Error("key must not have space between at line:" + (i + 1));
+        } else {
+            comments.push([i, line])
         }
         if (trimmed.length) result.set(trimmed, line.slice(eq + 1).trim().length > 0 ? line.slice(eq + 1).trim() : null);
     }
@@ -63,13 +65,11 @@ const deserialize = (input, options) => {
     }
     for (let i = 0; i < options.comments.length; i++) {
         output += options.comments[i][1]
-        if (i < keys.length - 1) {
+        if (i < options.comments.length - 1) {
             output += '\n'
         }
     }
     return output
 }
-
-// console.log(serialize(require('fs').readFileSync('./server.properties').toString()).toString())
 
 module.export = { serialize, deserialize }
