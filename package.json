@@ -1,7 +1,13 @@
 {
   "name": "server.props.js",
-  "version": "0.0.1",
-  "main": "index.js",
+  "version": "0.0.1a",
+  "main": "dist/index.js",
+  "types": "dist",
+  "typings": "dist/index.d.ts",
+  "module": "dist/server.props.esm.js",
   "license": "MIT",
-  "author": "boon4681"
+  "author": "boon4681",
+  "scripts": {
+    "build": "tsdx build"
+  }
 }

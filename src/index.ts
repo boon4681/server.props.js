@@ -4,10 +4,10 @@
  * @param {String} input 
  * @param {{throw:boolean}} options
  */
-const serialize = (input, options) => {
+export const serialize = (input, options) => {
     const lines = input.split("\n");
     let result = new Map()
-    let comments = []
+    let comments: [number, String][] = []
     for (let i = 0; i < lines.length; i++) {
         let line = lines[i]
         if (line.trimStart()[0] == "#") {
@@ -39,7 +39,7 @@ const serialize = (input, options) => {
  * @param {Map} input 
  * @param {{comments:[number,String][]}} options
  */
-const deserialize = (input, options) => {
+export const deserialize = (input, options) => {
     let keys = Array.from(input.keys())
     let output = ""
     if (options) {
@@ -71,5 +71,3 @@ const deserialize = (input, options) => {
     }
     return output
 }
-
-module.export = { serialize, deserialize }
