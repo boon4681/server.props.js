@@ -7,6 +7,15 @@
   "module": "dist/server.props.esm.js",
   "license": "MIT",
   "author": "boon4681",
+  "keywords": [
+    "TypeScript",
+    "Minecraft",
+    "server.properties"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "tsdx build"
   }
