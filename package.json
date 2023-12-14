@@ -1,6 +1,6 @@
 {
   "name": "server.props.js",
-  "version": "0.0.1a",
+  "version": "0.0.1b",
   "main": "dist/index.js",
   "types": "dist",
   "typings": "dist/index.d.ts",
